@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Perfil - DLXcore</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+    <header>
+        <div class="logo"><h1>DLXcore</h1></div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="news.html">Updates Diários</a>
+            <a href="cultura.html">Música & Gêneros</a>
+            <a href="design.html">Design de Produto</a>
+            <a href="cremes.html">Cremes & Skincare</a> 
+            <a href="profile.html" id="nav-profile-link" style="display: none;">Meu Perfil</a>
+        </nav>
+        <div class="user-profile">
+            <span id="username-display" style="display: none;"></span>
+            <button class="login-btn" id="login-button">Login/Cadastre-se</button>
+        </div>
+    </header>
+
+    <main>
+        <h2>Configurações do Meu Perfil</h2>
+        
+        <p style="color: var(--cor-texto-claro); font-size: 1.1em; margin-bottom: 40px;">
+            Gerencie sua identidade no DLXcore. Você pode trocar seu nome de usuário a qualquer momento.
+        </p>
+
+        <section class="profile-info">
+            <h3>Informações da Conta</h3>
+            <div class="cultura-info" style="border-left: 5px solid var(--cor-secundaria);">
+                <h4>Nome de Usuário Atual: <span id="current-username-text" style="color: var(--cor-primaria); font-weight: bold;">(Não Logado)</span></h4>
+                <p>Este é o nome que aparece no topo da página. Sua conta é armazenada localmente no seu navegador para esta sessão.</p>
+            </div>
+        </section>
+
+        <section class="username-change">
+            <h3>Alterar Nome de Usuário</h3>
+            <div class="username-change-form">
+                <input 
+                    type="text" 
+                    id="new-username-input" 
+                    placeholder="Digite o novo nome de usuário..." 
+                    style="
+                        padding: 12px; 
+                        width: 100%; 
+                        max-width: 400px; 
+                        border: 1px solid var(--cor-bordas); 
+                        border-radius: 5px; 
+                        margin-right: 15px;
+                        background-color: #ffffff;
+                        color: var(--cor-texto-escuro);
+                        font-size: 1em;
+                    "
+                >
+                <button 
+                    class="cta-button" 
+                    id="save-username-button"
+                    style="margin-top: 15px; display: block;"
+                >Salvar Novo Nome</button>
+                <p id="feedback-message" style="color: var(--cor-primaria); margin-top: 10px; display: none;">Nome atualizado com sucesso!</p>
+            </div>
+        </section>
+        
+        <section class="action-section" style="margin-top: 50px;">
+            <h3>Outras Ações</h3>
+            <button class="login-btn logged-in" id="profile-logout-button">Sair Desta Conta</button>
+        </section>
+
+    </main>
+
+    <footer>
+        &copy; 2025 DLXcore | Projeto de Design de Produto Escolar.
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
